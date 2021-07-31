@@ -1,0 +1,53 @@
+/* Slides from the left */
+.enter {
+  animation: enter 1000ms ease-out;
+  animation-fill-mode: both;
+  opacity: 0;
+}
+
+@keyframes enter {
+  0% {
+    transform: translateX(-100vw);
+  }
+  50% {
+    opacity: 0.4;
+    transform: translateX(0);
+  }
+  100% {
+    /* transform: translateX(0); */
+    opacity: 1;
+  }
+}
+
+/* Bounce */
+.bounce {
+  animation: bounce 1000ms ease-in-out;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Fade in */
+.fade-in {
+  animation: fade-in 1000ms linear;
+  animation-fill-mode: both;
+  opacity: 0;
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
