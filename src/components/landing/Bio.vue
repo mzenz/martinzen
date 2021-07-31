@@ -1,5 +1,5 @@
 <template>
-  <div class="bio">
+  <div id="bio" class="bio">
     <div class="section">
       <h2 class="section-marker">bio</h2>
       <div ref="separator" class="section-separator" />

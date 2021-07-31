@@ -1,22 +1,29 @@
 <template>
-  <div class="hero">
+  <div id="hero" class="hero">
     <img
       class="hero-image"
       src="@/assets/images/martian.png"
-      alt="DJ Martian's face"
+      alt="DJ Martian's half face"
     />
     <div class="content">
       <h1>Martin Zen</h1>
       <h1>{ a.k.a. Martian }</h1>
       <h2>DJ & Producer</h2>
       <ul>
-        <li class="enter" style="animation-delay: .1s"><a>bio</a></li>
+        <li class="enter" style="animation-delay: .1s"><a @click="scrollToBio()">bio</a></li>
         <li class="enter" style="animation-delay: .5s"><a>live mixes</a></li>
         <li class="enter" style="animation-delay: 1s"><a>productions</a></li>
         <li class="enter" style="animation-delay: 1.4s"><a>bookings</a></li>
       </ul>
 
-      <svg class="arrow bounce" width="52" height="27" viewBox="0 0 52 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg
+        class="arrow"
+        width="52" height="27"
+        viewBox="0 0 52 27"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        @click="scrollToBio()"
+      >
         <path d="M1 1L26 26L51 1" stroke="#58008E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </div>
@@ -77,3 +84,22 @@
   }
 }
 </style>
+
+<script lang="ts">
+  const scrollToElement = (elementName: String) => {
+    document.getElementById(elementName).scrollIntoView({behavior: "smooth"})
+  }
+
+  const scrollToBio = () => {
+    scrollToElement('bio')
+  }
+
+  export default {
+    name: 'Hero',
+    setup() {
+      return {
+        scrollToBio
+      }
+    }
+  }
+</script>
