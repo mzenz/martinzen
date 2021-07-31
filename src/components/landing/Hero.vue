@@ -11,7 +11,7 @@
       <h2>DJ & Producer</h2>
       <ul>
         <li class="enter" style="animation-delay: .1s"><a @click="scrollToBio()">bio</a></li>
-        <li class="enter" style="animation-delay: .5s"><a>live mixes</a></li>
+        <li class="enter" style="animation-delay: .5s"><a @click="scrollToMixes()">live mixes</a></li>
         <li class="enter" style="animation-delay: 1s"><a>productions</a></li>
         <li class="enter" style="animation-delay: 1.4s"><a>bookings</a></li>
       </ul>
@@ -86,20 +86,20 @@
 </style>
 
 <script lang="ts">
-  const scrollToElement = (elementName: String) => {
-    document.getElementById(elementName).scrollIntoView({behavior: "smooth"})
-  }
+const scrollToElement = (elementName: String) => {
+  document.getElementById(elementName).scrollIntoView({behavior: "smooth"})
+}
 
-  const scrollToBio = () => {
-    scrollToElement('bio')
-  }
+const scrollToBio = () => scrollToElement('bio')
+const scrollToMixes = () => scrollToElement('mixes')
 
-  export default {
-    name: 'Hero',
-    setup() {
-      return {
-        scrollToBio
-      }
+export default {
+  name: 'Hero',
+  setup() {
+    return {
+      scrollToBio,
+      scrollToMixes
     }
   }
+}
 </script>
