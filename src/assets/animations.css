@@ -19,35 +19,20 @@
   }
 }
 
-/* Bounce */
-.bounce {
-  animation: bounce 1000ms ease-in-out;
+/* Expands vertically */
+.expand-vertical {
+  animation: expand-vertical 1000ms ease-out;
   animation-fill-mode: both;
-  animation-iteration-count: infinite;
+  transform-origin: top;
 }
 
-@keyframes bounce {
+@keyframes expand-vertical {
   0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-1rem);
+    opacity: 0;
+    transform: scaleY(0);
   }
   100% {
-    transform: translateY(0);
-  }
-}
-
-/* Fade in */
-.fade-in {
-  animation: fade-in 1000ms linear;
-  animation-fill-mode: both;
-  opacity: 0;
-}
-
-@keyframes fade-in {
-  to {
     opacity: 1;
+    transform: scaleY(1);
   }
 }
-
