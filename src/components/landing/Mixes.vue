@@ -36,12 +36,11 @@ export default {
   display: grid;
   place-content: center;
   position: relative;
-  /* background-color: #fcfcfc; */
-  background-color: #f0f0f0;
+  background-color: white;
   background-image: url('@/assets/images/martian-full.jpg');
-  background-position: center;
+  background-size: contain;
+  background-position: right;
   background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .section {

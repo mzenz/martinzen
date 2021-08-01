@@ -7,10 +7,11 @@
 <style scoped>
 .footer {
   width: 100%;
+  padding: .5rem 0;
   display: flex;
   place-content: center;
   flex-direction: row;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
 
   color: #aaa;
   background-color: black;
@@ -19,7 +20,7 @@
 a {
   color: #aaa;
   font-weight: 400;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   letter-spacing: 0.12em;
   text-transform: none;
 }
