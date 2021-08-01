@@ -1,0 +1,16 @@
+{
+  "contact": {
+    "address": "martin@groovly.fm",
+    "subject": "RE: Martin Zen Booking Inquiry"
+  },
+  "mixes": [
+    "https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fmartinzen%2Fquantum-of-soulace%2F",
+    "https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fmartinzen%2Fsoul-feel-all-vinyl-mix%2F",
+    "https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fmartinzen%2Fsummer-soulstice%2F",
+    "https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fmartinzen%2Fthe-journey%2F",
+    "https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fmartinzen%2Fback-to-old-school%2F"
+  ],
+  "videos": [
+    "https://www.youtube.com/embed/HINdnJvpjwo"
+  ]
+}

@@ -12,8 +12,11 @@
       <ul>
         <li class="enter" style="animation-delay: .1s"><a @click="scrollToBio()">bio</a></li>
         <li class="enter" style="animation-delay: .5s"><a @click="scrollToMixes()">live mixes</a></li>
-        <li class="enter" style="animation-delay: 1s"><a>productions</a></li>
-        <li class="enter" style="animation-delay: 1.4s"><a>bookings</a></li>
+        <li class="enter" style="animation-delay: .9s"><a @click="scrollToVideos()">videos</a></li>
+        <li class="enter" style="animation-delay: 1.3s"><a>productions</a></li>
+        <li class="enter" style="animation-delay: 1.7s">
+          <a :href="`mailto:${config.contact.address}?subject=${config.contact.subject}`">bookings</a>
+        </li>
       </ul>
 
       <svg
@@ -86,19 +89,24 @@
 </style>
 
 <script lang="ts">
+import config from '@/config.json'
+
 const scrollToElement = (elementName: String) => {
   document.getElementById(elementName).scrollIntoView({behavior: "smooth"})
 }
 
 const scrollToBio = () => scrollToElement('bio')
 const scrollToMixes = () => scrollToElement('mixes')
+const scrollToVideos = () => scrollToElement('videos')
 
 export default {
   name: 'Hero',
   setup() {
     return {
       scrollToBio,
-      scrollToMixes
+      scrollToMixes,
+      scrollToVideos,
+      config
     }
   }
 }

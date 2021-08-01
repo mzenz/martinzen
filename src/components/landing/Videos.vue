@@ -1,16 +1,18 @@
 <template>
-  <div id="mixes" class="mixes">
+  <div id="videos" class="videos">
     <div class="section">
-      <h2 class="section-marker">mixes</h2>
+      <h2 class="section-marker">videos</h2>
       <div ref="separator" class="section-separator" />
       <div>
-        <!-- embedded Mixcloud players -->
+        <!-- embedded YouTube players -->
         <iframe
-          v-for="(t, i) in mixes"
+          v-for="(t, i) in videos"
           :key="i"
-          class="mixcloud-player"
+          class="youtube-player"
           frameborder="0"
-          :src="mixes[i]"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          :src="videos[i]"
         />
       </div>
     </div>
@@ -22,7 +24,7 @@ import { ref, onMounted, onBeforeUnmount } from 'vue'
 import config from '@/config.json'
 
 export default {
-  name: 'Mixes',
+  name: 'Videos',
   setup() {
     const separator = ref(null)
     const threshold = 0.3
@@ -47,31 +49,32 @@ export default {
     return {
       separator,
       observer,
-      mixes: config.mixes
+      videos: config.videos
     }
   }
 }
 </script>
 
 <style scoped>
-.mixes {
+.videos {
   display: grid;
   place-content: center;
   position: relative;
-  background-color: white;
+  background-color: black;
   width: 100%;
 }
 
 .section {
   display: flex;
   flex-direction: row;
-  color: black;
+  color: white;
   max-width: 40rem;
+  /* width: 100%; */
   margin: 5rem 3rem;
 }
 
 .section-marker {
-  color: black;
+  color: white;
   writing-mode: vertical-rl;
   text-orientation: sideways;
   margin-top: .2rem;
@@ -79,15 +82,14 @@ export default {
 
 .section-separator {
   opacity: 0;
-  border-left: 1px solid black;
+  border-left: 1px solid white;
   padding-right: 1rem;
   margin-left: .3rem;
   margin-top: .2rem;
   margin-bottom: 1rem;
 }
 
-.mixcloud-player {
+.youtube-player {
   width: 100%;
-  /* height: 30rem; */
 }
 </style>
