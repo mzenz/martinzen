@@ -1,15 +1,18 @@
 <template>
-  <div id="mixes" class="mixes">
+  <div id="production" class="production">
     <div class="section">
-      <SectionMarker name="live mixes" color="#d1d1d1" />
+      <SectionMarker name="production" />
       <div>
-        <!-- embedded Mixcloud players -->
+        <!-- embedded SoundCloud players -->
         <iframe
-          v-for="(t, i) in mixes"
+          v-for="(t, i) in production"
           :key="i"
-          class="mixcloud-player"
-          frameborder="0"
-          :src="mixes[i]"
+          class="soundcloud-player"
+          height="300"
+          scrolling="no"
+          frameborder="no"
+          allow="autoplay"
+          :src="production[i]"
         />
       </div>
     </div>
@@ -21,33 +24,34 @@ import SectionMarker from '@/components/SectionMarker.vue'
 import config from '@/config.json'
 
 export default {
-  name: 'Mixes',
+  name: 'Production',
   components: { SectionMarker },
   setup() {
     return {
-      mixes: config.mixes
+      production: config.production
     }
   }
 }
 </script>
 
 <style scoped>
-.mixes {
+.production {
   display: grid;
   place-content: center;
   position: relative;
-  background-color: #25292c;
+  background-color: white;
+  width: 100%;
 }
 
 .section {
   display: flex;
   flex-direction: row;
-  color: #d1d1d1;
+  color: black;
   max-width: 40rem;
   margin: 5rem 3rem;
 }
 
-.mixcloud-player {
-  width: 100%;
+.soundcloud-player {
+  height: 10rem;
 }
 </style>

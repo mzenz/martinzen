@@ -1,8 +1,7 @@
 <template>
   <div id="bio" class="bio">
     <div class="section">
-      <h2 class="section-marker">bio</h2>
-      <div ref="separator" class="section-separator" />
+      <SectionMarker name="bio" color="white" />
       <div>
         <p>Hailing from cosmopolitan Buenos Aires, Argentina, Martin Zen – a.k.a. MARTIAN – discovered the underground house music scene early in life, rapidly becoming enmeshed in the local DJ community, and ultimately developing a passion for record-collecting and DJing, which continues to this day.</p>
         <p>Heavily influenced by the roots of house music as well as many other genres, MARTIAN's live performances are highly danceable, vibrant, yet eclectic – almost educational at times. Fusing old school with avant garde, he's always on the lookout for opportunities to delight the crowd while bringing people together through the unique power of music.</p>
@@ -14,36 +13,11 @@
 </template>
 
 <script lang="ts">
-import { ref, onMounted, onBeforeUnmount } from 'vue'
+import SectionMarker from '@/components/SectionMarker.vue'
 
 export default {
   name: 'Bio',
-  setup() {
-    const separator = ref(null)
-    const threshold = 0.3
-
-    const onIntersection = (entries: IntersectionObserverEntry[]) => {
-      if (entries[0].isIntersecting) {
-        separator.value.classList.add('expand-vertical');
-      } else {
-        separator.value.classList.remove('expand-vertical');
-      }
-    }
-    const observer = new IntersectionObserver(onIntersection, { root: null, threshold: threshold })
-
-    onMounted(() => {
-      observer.observe(separator.value)
-    })
-
-    onBeforeUnmount(() => {
-      observer.disconnect();
-    })
-
-    return {
-      separator,
-      observer
-    }
-  }
+  components: { SectionMarker }
 }
 </script>
 

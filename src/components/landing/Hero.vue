@@ -10,12 +10,24 @@
       <h1>{ a.k.a. Martian }</h1>
       <h2>DJ & Producer</h2>
       <ul>
-        <li class="enter" style="animation-delay: .1s"><a @click="scrollToBio()">bio</a></li>
-        <li class="enter" style="animation-delay: .5s"><a @click="scrollToMixes()">live mixes</a></li>
-        <li class="enter" style="animation-delay: .9s"><a @click="scrollToVideos()">videos</a></li>
-        <li class="enter" style="animation-delay: 1.3s"><a>productions</a></li>
+        <li class="enter" style="animation-delay: .1s">
+          <a @click="scrollToBio()">bio</a>
+        </li>
+
+        <li class="enter" style="animation-delay: .5s">
+          <a @click="scrollToMixes()">live mixes</a>
+        </li>
+
+        <li class="enter" style="animation-delay: .9s">
+          <a @click="scrollToProduction()">production</a>
+        </li>
+
+        <li class="enter" style="animation-delay: 1.3s">
+          <a @click="scrollToVideos()">videos</a>
+        </li>
+
         <li class="enter" style="animation-delay: 1.7s">
-          <a :href="`mailto:${config.contact.address}?subject=${config.contact.subject}`">bookings</a>
+          <a :href="`mailto:${config.contact.address}?subject=${config.contact.subject}&body=${config.contact.message}`">bookings</a>
         </li>
       </ul>
 
@@ -25,7 +37,7 @@
         viewBox="0 0 52 27"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        @click="scrollToBio()"
+        @click="scrollToMixes()"
       >
         <path d="M1 1L26 26L51 1" stroke="#58008E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
@@ -97,6 +109,7 @@ const scrollToElement = (elementName: String) => {
 
 const scrollToBio = () => scrollToElement('bio')
 const scrollToMixes = () => scrollToElement('mixes')
+const scrollToProduction = () => scrollToElement('production')
 const scrollToVideos = () => scrollToElement('videos')
 
 export default {
@@ -105,6 +118,7 @@ export default {
     return {
       scrollToBio,
       scrollToMixes,
+      scrollToProduction,
       scrollToVideos,
       config
     }
