@@ -37,7 +37,7 @@
         viewBox="0 0 52 27"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        @click="scrollToMixes()"
+        @click="scrollToBio()"
       >
         <path d="M1 1L26 26L51 1" stroke="#58008E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
