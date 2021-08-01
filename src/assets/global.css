@@ -1,13 +1,6 @@
 :root {
   --primary-font: Montserrat, sans-serif;
-  --primary-color: #0cf;
-  --link-color: #08f;
-
-  --nav-height: 4rem;
-  --footer-height: 3rem;
-  --layout-margin: 5vw;
-  --dialog-min-width: 26rem;
-  --popup-width: 22rem;
+  --link-color: #8000ff;
 }
 
 @font-face {

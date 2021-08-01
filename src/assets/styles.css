@@ -41,6 +41,12 @@ a, a:visited {
   transition: color 150ms linear;
 }
 
+@media (hover: hover) {
+  a:hover {
+    color: var(--link-color);
+  }
+}
+
 ul {
   list-style: none;
   padding-top: 5em;
