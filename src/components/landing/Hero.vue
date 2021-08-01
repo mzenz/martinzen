@@ -74,6 +74,7 @@
 
 .content {
   padding-top: 5rem;
+  padding-bottom: 5rem;
   margin-left: 4rem;
 }
 
