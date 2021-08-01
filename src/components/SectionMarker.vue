@@ -20,7 +20,7 @@
 }
 .section-separator {
   opacity: 0;
-  border-left: 1px solid;
+  border-left: .2rem solid;
   padding-right: 1rem;
   margin-left: .3rem;
 }
