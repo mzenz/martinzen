@@ -5,14 +5,15 @@
     "message": "Hi!%0A%0AI'd like to inquire about booking information.%0A%0A"
   },
   "mixes": [
-    "https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=0&feed=%2Fmartinzen%2Fquantum-of-soulace%2F",
-    "https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=0&feed=%2Fmartinzen%2Fsoul-feel-all-vinyl-mix%2F",
-    "https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=0&feed=%2Fmartinzen%2Fsummer-soulstice%2F",
-    "https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=0&feed=%2Fmartinzen%2Fthe-journey%2F",
-    "https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=0&feed=%2Fmartinzen%2Fback-to-old-school%2F"
+    "https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fmartinzen%2Fquantum-of-soulace%2F",
+    "https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fmartinzen%2Fsoul-feel-all-vinyl-mix%2F",
+    "https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fmartinzen%2Fsummer-soulstice%2F",
+    "https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fmartinzen%2Fthe-journey%2F",
+    "https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fmartinzen%2Fback-to-old-school%2F"
   ],
   "production": [
-    "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/337839889&color=%237600ff&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
+    "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1097983192&color=%2341176f&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
+    "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1097985826&color=%234c4c44&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
   ],
   "videos": [
     "https://www.youtube.com/embed/vR0SEypZMs0"

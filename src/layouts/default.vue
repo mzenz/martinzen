@@ -1,15 +1,15 @@
 <template>
   <main>
-    <!-- <Nav /> -->
     <router-view />
+    <Footer />
   </main>
 </template>
 
 <script lang="ts">
-import Nav from '@/components/Nav.vue'
+import Footer from '@/components/Footer.vue'
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  components: { Nav }
+  components: { Footer }
 })
 </script>

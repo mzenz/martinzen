@@ -1,7 +1,7 @@
 <template>
   <div id="production" class="production">
     <div class="section">
-      <SectionMarker name="production" />
+      <SectionMarker name="music production" color="#ccc" />
       <div>
         <!-- embedded SoundCloud players -->
         <iframe
@@ -39,19 +39,19 @@ export default {
   display: grid;
   place-content: center;
   position: relative;
-  background-color: white;
+  background-color: black;
   width: 100%;
 }
 
 .section {
   display: flex;
   flex-direction: row;
-  color: black;
+  /* color: black; */
   max-width: 40rem;
   margin: 5rem 3rem;
 }
 
 .soundcloud-player {
-  height: 10rem;
+  width: 100%;
 }
 </style>

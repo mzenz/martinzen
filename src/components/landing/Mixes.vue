@@ -1,7 +1,7 @@
 <template>
   <div id="mixes" class="mixes">
     <div class="section">
-      <SectionMarker name="live mixes" color="#d1d1d1" />
+      <SectionMarker name="live mixes" color="#555" />
       <div>
         <!-- embedded Mixcloud players -->
         <iframe
@@ -36,15 +36,20 @@ export default {
   display: grid;
   place-content: center;
   position: relative;
-  background-color: #25292c;
+  /* background-color: #fcfcfc; */
+  background-color: #f0f0f0;
+  background-image: url('@/assets/images/martian-full.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .section {
   display: flex;
   flex-direction: row;
-  color: #d1d1d1;
   max-width: 40rem;
   margin: 5rem 3rem;
+  opacity: 0.9;
 }
 
 .mixcloud-player {

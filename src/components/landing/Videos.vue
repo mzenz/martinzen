@@ -1,9 +1,8 @@
 <template>
   <div id="videos" class="videos">
     <div class="section">
-      <SectionMarker name="video" color="white" />
+      <SectionMarker name="videos" color="black" />
       <div>
-        <!-- embedded YouTube players -->
         <iframe
           v-for="(t, i) in videos"
           :key="i"
@@ -19,24 +18,23 @@
 </template>
 
 <style scoped>
-  .videos {
-    display: grid;
-    place-content: center;
-    position: relative;
-    background-color: black;
-  }
+.videos {
+  display: grid;
+  place-content: center;
+  position: relative;
+  background-color: white;
+}
 
-  .section {
-    display: flex;
-    flex-direction: row;
-    color: white;
-    max-width: 40rem;
-    margin: 5rem 3rem;
-  }
+.section {
+  display: flex;
+  flex-direction: row;
+  max-width: 40rem;
+  margin: 5rem 3rem;
+}
 
-  .youtube-player {
-    width: 100%;
-  }
+.youtube-player {
+  width: 100%;
+}
 </style>
 
 <script lang="ts">
