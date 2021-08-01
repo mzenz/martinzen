@@ -17,5 +17,11 @@
   ],
   "videos": [
     "https://www.youtube.com/embed/vR0SEypZMs0"
-  ]
+  ],
+  "social": {
+    "mixcloud": "https://www.mixcloud.com/martinzen/",
+    "soundcloud": "https://soundcloud.com/martinzen",
+    "instagram": "https://www.instagram.com/iamonlyanegg/",
+    "youtube": "https://www.youtube.com/channel/UC84PD-d5K6u3OKCwXZSKmbQ"
+  }
 }
