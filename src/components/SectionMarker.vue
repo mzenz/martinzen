@@ -21,7 +21,7 @@
   transform: translateY(-0.2rem);
 }
 .section-separator {
-  border-left: .2rem solid;
+  border-left: .15rem solid;
   padding-right: 1rem;
   margin-left: .3rem;
 
