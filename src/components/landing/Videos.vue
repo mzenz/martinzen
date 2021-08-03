@@ -18,6 +18,17 @@
         />
       </div>
     </div>
+    <svg
+      class="arrow"
+      width="52"
+      height="27"
+      viewBox="0 0 52 27"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      @click="scrollToTop()"
+    >
+      <path d="M1 26L26 1L51 26" stroke="#58008E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
   </div>
 </template>
 
@@ -39,18 +50,48 @@
 .youtube-player {
   width: 100%;
 }
+
+.arrow {
+  position: absolute;
+  transform-origin: center center;
+  left: 50%;
+  transform: translateX(-50%);
+
+  animation: bounce 600ms ease-in-out;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  cursor: pointer;
+}
+
+@keyframes bounce {
+  0% {
+    bottom: 1rem;
+  }
+  100% {
+    bottom: 2rem;
+  }
+}
 </style>
 
 <script lang="ts">
 import SectionMarker from '@/components/SectionMarker.vue'
 import config from '@/config.json'
 
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  })
+}
+
 export default {
   name: 'Videos',
   components: { SectionMarker },
   setup() {
     return {
-      videos: config.videos
+      videos: config.videos,
+      scrollToTop
     }
   }
 }
