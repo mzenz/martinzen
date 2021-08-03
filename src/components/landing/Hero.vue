@@ -7,33 +7,38 @@
     />
     <div class="content">
       <h1>Martin Zen</h1>
-      <h1>{ a.k.a. Martian }</h1>
+      <h2>{ a.k.a. Martian }</h2>
       <h2>DJ & Producer</h2>
-      <ul>
+      <ul style="padding-top: 3em">
         <li class="enter" style="animation-delay: .1s">
           <a @click="scrollToBio()">bio</a>
         </li>
 
-        <li class="enter" style="animation-delay: .5s">
+        <li class="enter" style="animation-delay: .4s">
           <a @click="scrollToMixes()">live mixes</a>
         </li>
 
-        <li class="enter" style="animation-delay: .9s">
+        <li class="enter" style="animation-delay: .7s">
           <a @click="scrollToProduction()">production</a>
         </li>
 
-        <li class="enter" style="animation-delay: 1.3s">
+        <li class="enter" style="animation-delay: 1s">
           <a @click="scrollToVideos()">videos</a>
         </li>
 
-        <li class="enter" style="animation-delay: 1.7s">
+        <li class="enter" style="animation-delay: 1.3s">
           <a :href="`mailto:${config.contact.address}?subject=${config.contact.subject}&body=${config.contact.message}`">bookings</a>
+        </li>
+
+        <li class="enter" style="animation-delay: 1.6s">
+          <a @click="scrollToFooter()">social</a>
         </li>
       </ul>
 
       <svg
         class="arrow"
-        width="52" height="27"
+        width="52"
+        height="27"
         viewBox="0 0 52 27"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +78,7 @@
 }
 
 .content {
-  padding-top: 5rem;
+  padding-top: 3rem;
   padding-bottom: 5rem;
   margin-left: 4rem;
 }
@@ -112,6 +117,7 @@ const scrollToBio = () => scrollToElement('bio')
 const scrollToMixes = () => scrollToElement('mixes')
 const scrollToProduction = () => scrollToElement('production')
 const scrollToVideos = () => scrollToElement('videos')
+const scrollToFooter = () => scrollToElement('footer')
 
 export default {
   name: 'Hero',
@@ -121,6 +127,7 @@ export default {
       scrollToMixes,
       scrollToProduction,
       scrollToVideos,
+      scrollToFooter,
       config
     }
   }

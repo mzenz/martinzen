@@ -1,7 +1,11 @@
 <template>
   <div id="videos" class="videos">
     <div class="section">
-      <SectionMarker name="videos" color="black" />
+      <SectionMarker
+        name="videos"
+        color="black"
+        threshold="1.0"
+      />
       <div>
         <iframe
           v-for="(t, i) in videos"

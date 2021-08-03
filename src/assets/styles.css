@@ -29,7 +29,7 @@ body {
 a, a:visited {
   position: relative;
   color: black;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 400;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -49,7 +49,6 @@ a, a:visited {
 
 ul {
   list-style: none;
-  padding-top: 5em;
 }
 
 li {
