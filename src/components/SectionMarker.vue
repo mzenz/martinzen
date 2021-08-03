@@ -25,19 +25,16 @@
   padding-right: 1rem;
   margin-left: .3rem;
 
-  /* animate transform and opacity */
-  transition: transform 1s ease-out, opacity 1s linear;
+  /* animate transform */
+  transition: transform 1s ease-out;
   transform-origin: top;
 
-  /* start hidden / shrunk */
+  /* start fully collapsed */
   transform: scaleY(0);
-  opacity: 0;
 }
 
-/* Expands vertically */
 .expand-vertical {
   transform: scaleY(1);
-  opacity: 1;
 }
 </style>
 

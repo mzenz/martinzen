@@ -27,7 +27,7 @@
       xmlns="http://www.w3.org/2000/svg"
       @click="scrollToTop()"
     >
-      <path d="M1 26L26 1L51 26" stroke="#58008E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M1 26L26 1L51 26" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
   </div>
 </template>
