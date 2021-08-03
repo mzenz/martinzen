@@ -1,6 +1,7 @@
 <template>
   <h2
-    class="section-marker"
+    class="section-title"
+    ref="title"
     :style="`color: ${color}`"
   >
     {{ name }}
@@ -13,16 +14,30 @@
 </template>
 
 <style scoped>
-.section-marker {
+.section-title {
   writing-mode: vertical-rl;
   text-orientation: sideways;
   margin-top: .2rem;
+  transform: translateY(-0.2rem);
 }
 .section-separator {
-  opacity: 0;
   border-left: .2rem solid;
   padding-right: 1rem;
   margin-left: .3rem;
+
+  /* animate transform and opacity */
+  transition: transform 1s ease-out, opacity 1s linear;
+  transform-origin: top;
+
+  /* start hidden / shrunk */
+  transform: scaleY(0);
+  opacity: 0;
+}
+
+/* Expands vertically */
+.expand-vertical {
+  transform: scaleY(1);
+  opacity: 1;
 }
 </style>
 
@@ -49,27 +64,31 @@ export default {
     }
   },
   setup(props) {
+    const title = ref(null)
     const separator = ref(null)
 
     const onIntersection = (entries: IntersectionObserverEntry[]) => {
       if (entries[0].isIntersecting) {
-        separator.value.classList.add('expand-vertical');
+        separator.value.classList.add('expand-vertical')
       } else {
-        separator.value.classList.remove('expand-vertical');
+        separator.value.classList.remove('expand-vertical')
       }
     }
     const observer = new IntersectionObserver(onIntersection, { root: null, threshold: props.threshold })
 
     onMounted(() => {
-      observer.observe(separator.value)
+      // observe intersection of title element! (instead of
+      // separator element which starts collaped, i.e. y-scale = 0)
+      observer.observe(title.value)
     })
 
     onBeforeUnmount(() => {
-      observer.disconnect();
+      observer.disconnect()
     })
 
     return {
       separator,
+      title,
       observer
     }
   }

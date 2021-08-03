@@ -14,25 +14,6 @@
     transform: translateX(0);
   }
   100% {
-    /* transform: translateX(0); */
     opacity: 1;
-  }
-}
-
-/* Expands vertically */
-.expand-vertical {
-  animation: expand-vertical 1000ms ease-out;
-  animation-fill-mode: both;
-  transform-origin: top;
-}
-
-@keyframes expand-vertical {
-  0% {
-    opacity: 0;
-    transform: scaleY(0);
-  }
-  100% {
-    opacity: 1;
-    transform: scaleY(1);
   }
 }
