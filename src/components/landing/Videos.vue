@@ -4,18 +4,21 @@
       <SectionMarker
         name="videos"
         color="black"
-        threshold="1.0"
+        :threshold="1.0"
       />
       <div>
-        <iframe
+        <LazyLoader
           v-for="(t, i) in videos"
           :key="i"
-          class="youtube-player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-          :src="videos[i]"
-        />
+        >
+          <iframe
+            class="youtube-player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            :src="videos[i]"
+          />
+        </LazyLoader>
       </div>
     </div>
     <svg
@@ -76,6 +79,7 @@
 
 <script lang="ts">
 import SectionMarker from '@/components/SectionMarker.vue'
+import LazyLoader from '@/components/LazyLoader.vue'
 import config from '@/config.json'
 
 const scrollToTop = () => {
@@ -87,7 +91,10 @@ const scrollToTop = () => {
 
 export default {
   name: 'Videos',
-  components: { SectionMarker },
+  components: {
+    SectionMarker,
+    LazyLoader
+  },
   setup() {
     return {
       videos: config.videos,

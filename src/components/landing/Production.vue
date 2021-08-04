@@ -3,17 +3,20 @@
     <div class="section">
       <SectionMarker name="music production" color="#ccc" />
       <div>
-        <!-- embedded SoundCloud players -->
-        <iframe
+        <LazyLoader
           v-for="(t, i) in production"
           :key="i"
-          class="soundcloud-player"
-          height="300"
-          scrolling="no"
-          frameborder="no"
-          allow="autoplay"
-          :src="production[i]"
-        />
+        >
+          <!-- embedded SoundCloud players -->
+          <iframe
+            class="soundcloud-player"
+            height="300"
+            scrolling="no"
+            frameborder="no"
+            allow="autoplay"
+            :src="production[i]"
+          />
+        </LazyLoader>
       </div>
     </div>
   </div>
@@ -21,11 +24,15 @@
 
 <script lang="ts">
 import SectionMarker from '@/components/SectionMarker.vue'
+import LazyLoader from '@/components/LazyLoader.vue'
 import config from '@/config.json'
 
 export default {
   name: 'Production',
-  components: { SectionMarker },
+  components: {
+    SectionMarker,
+    LazyLoader
+  },
   setup() {
     return {
       production: config.production

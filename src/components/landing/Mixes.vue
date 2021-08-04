@@ -4,13 +4,16 @@
       <SectionMarker name="live mixes" color="#555" />
       <div>
         <!-- embedded Mixcloud players -->
-        <iframe
+        <LazyLoader
           v-for="(t, i) in mixes"
           :key="i"
-          class="mixcloud-player"
-          frameborder="0"
-          :src="mixes[i]"
-        />
+        >
+          <iframe
+            class="mixcloud-player"
+            frameborder="0"
+            :src="mixes[i]"
+          />
+        </LazyLoader>
       </div>
     </div>
   </div>
@@ -18,11 +21,15 @@
 
 <script lang="ts">
 import SectionMarker from '@/components/SectionMarker.vue'
+import LazyLoader from '@/components/LazyLoader.vue'
 import config from '@/config.json'
 
 export default {
   name: 'Mixes',
-  components: { SectionMarker },
+  components: {
+    SectionMarker,
+    LazyLoader
+  },
   setup() {
     return {
       mixes: config.mixes
