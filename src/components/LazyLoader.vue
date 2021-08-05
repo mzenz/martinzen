@@ -1,15 +1,14 @@
 <template>
-  <div
+  <template
     v-if="!loaded"
   >
     <div ref="placeholder" class="placeholder"></div>
-  </div>
-  <div
+  </template>
+  <template
     v-else
   >
     <slot />
-  </div>
-
+  </template>
 </template>
 
 <style scoped>
