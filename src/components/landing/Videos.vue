@@ -51,7 +51,15 @@
 }
 
 .youtube-player {
-  width: 100%;
+  width: 30rem;
+  height: 17rem;
+}
+
+@media only screen and (max-width: 500px) {
+  .youtube-player {
+    width: 25rem;
+    height: 14rem;
+  }
 }
 
 .arrow {
