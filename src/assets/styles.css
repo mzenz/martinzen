@@ -1,22 +1,23 @@
 h1 {
   position: relative;
   margin-top: 0;
-  margin-bottom: .5rem;
+  margin-bottom: 1rem;
   color: black;
   font-weight: 400;
-  font-size: 1.6rem;
+  font-size: 2.6rem;
   letter-spacing: 0.16em;
+  line-height: 3rem;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 h2 {
   position: relative;
   color: black;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 400;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  margin-top: 1rem;
 }
 
 body {
@@ -30,7 +31,7 @@ a, a:visited {
   position: relative;
   color: black;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: 450;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 
@@ -43,6 +44,7 @@ a, a:visited {
 
 @media (hover: hover) {
   a:hover {
+    /* color: white; */
     color: var(--link-color);
   }
 }
@@ -52,12 +54,13 @@ ul {
 }
 
 li {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+  margin-left: 1.4rem;
 }
 
 ul > li::before {
-  content: "@";
+  content: "▶";
+  opacity: .6;
   display: inline-block;
-  transform: translate(0, -.1rem);
-  width: 1.5em;
+  transform: translate(-1.1rem, -.3rem) scale(2);
 }

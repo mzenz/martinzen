@@ -1,15 +1,17 @@
 :root {
   --primary-font: Montserrat, sans-serif;
-  --link-color: #8000ff;
+  --link-color: #80f;
 }
 
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 200 900;
   font-display: swap;
-  src: url('/fonts/Montserrat-Regular.woff2') format('woff2'),
-       url('/fonts/Montserrat-Regular.ttf') format('truetype');
+  src: url('@/assets/fonts/Montserrat-Variable.woff2') format('woff2 supports variations'),
+       url('@/assets/fonts/Montserrat-Variable.woff2') format('woff2-variations'),
+       url('@/assets/fonts/Montserrat-Regular.woff2') format('woff2'),
+       url('@/assets/fonts/Montserrat-Regular.ttf') format('truetype');
 }
 
 *,

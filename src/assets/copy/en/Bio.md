@@ -4,4 +4,4 @@ Heavily influenced by the roots of house music as well as many other genres, MAR
 
 He produced underground remixes of classics by Sade, The Jackson 5, plus a few more in the works, having released most of them on vinyl as limited-edition pressings aimed at DJs in the know.
 
-MARTIAN's favourite medium is vinyl, making every live set artisanal in nature, with Logic Pro as his weapon of choice when it comes to music production.
+MARTIAN's favorite medium is vinyl, making every live set artisanal in nature. Logic Pro is his weapon of choice for music production.

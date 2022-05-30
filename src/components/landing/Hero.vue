@@ -7,7 +7,6 @@
     />
     <div class="content">
       <h1>Martin Zen</h1>
-      <h2>{ a.k.a. Martian }</h2>
       <h2>DJ & Producer</h2>
       <ul style="padding-top: 3em">
         <li class="enter" style="animation-delay: .1s">
@@ -54,7 +53,7 @@
 .hero {
   position: relative;
   display: block;
-  background: linear-gradient(270deg, #7124BE 0%, #C496FF 100%);
+  background: linear-gradient(270deg, #a124be 0%, #C496FF 100%);
 
   width: 100%;
   height: 100vh;
@@ -66,13 +65,13 @@
   float: right;
   shape-outside: url('@/assets/images/martian.png');
   height: 100%;
+  opacity: .4;
 }
 
 @media only screen and (max-width: 500px) {
   .hero-image {
     float: none;
     position: absolute;
-    opacity: .4;
     right: 0;
   }
 }
